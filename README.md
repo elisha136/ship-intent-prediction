@@ -1,16 +1,16 @@
 # Ship Intent Prediction
 
-A comprehensive ship trajectory prediction system using real AIS (Automatic Identification System) data from Norwegian coastal waters. This project implements and compares multiple prediction approaches including statistical models, machine learning, and data-driven ensemble methods.
+A  ship trajectory prediction system using real AIS (Automatic Identification System) data from Norwegian coastal waters. This project implements and compares multiple prediction approaches including statistical models, machine learning, and data-driven ensemble methods.
 
-## 📊 Dataset
+## Dataset
 
-- **Source**: TimescaleDB database with real AIS position data
+- **Source**: TimescaleDB database with real AIS position data from sognefjord collected by Norwegian Electric ssytems
 - **Size**: 32.4 million records
 - **Vessels**: 1,065 unique ships
 - **Time Period**: August 2024 - March 2025 (240 days)
 - **Region**: Norwegian coastal waters
 
-## 🎯 Features
+## Features
 
 ### Prediction Models
 
@@ -41,7 +41,7 @@ A comprehensive ship trajectory prediction system using real AIS (Automatic Iden
 - **Prediction Horizons**: 30s, 60s, 120s, 180s, 300s
 - **Visualization**: Performance comparison plots, error growth analysis
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -95,7 +95,7 @@ ship_intent_prediction/
 └── main.py                 # Main execution script
 ```
 
-## 📈 Performance
+## Performance
 
 ### Baseline Results (Test Mode)
 
@@ -105,16 +105,7 @@ ship_intent_prediction/
 | Constant Turn Rate | 14.79m | 5.2m | 8.1m | 14.3m | 20.5m | 31.8m |
 | Kalman Filter | 133.87m | 45.2m | 68.3m | 125.1m | 178.4m | 276.5m |
 
-### Expected Results (Full Dataset)
 
-| Model | Expected Mean ADE | Improvement |
-|-------|-------------------|-------------|
-| Random Forest | 20-40m | Competitive with CV |
-| Learned Weighting | 12-13m | 10-20% better than CV |
-| Feature Gating | 13-14m | 5-15% better than CV |
-| Stacking Ensemble | 10-12m | 20-30% better than CV |
-
-## 🔬 Technical Details
 
 ### Feature Engineering (35 features)
 
@@ -130,15 +121,7 @@ ship_intent_prediction/
 2. **Feature Gating**: Random Forest classifier selects best model per scenario
 3. **Stacking**: Gradient Boosting meta-model learns optimal combinations
 
-## 📊 Visualization
 
-Results include:
-- Model performance comparison tables
-- Error growth analysis plots
-- Per-horizon performance metrics
-- Detailed evaluation summaries
-
-## 🛠️ Development
 
 ### Adding New Models
 
@@ -152,20 +135,4 @@ Results include:
 1. Add feature extraction in `models/machine_learning/ml.py`
 2. Update feature count in model initialization
 3. Retrain models with new features
-
-## 📝 License
-
-This project is for research and educational purposes.
-
-## 👥 Contributors
-
-Ship Trajectory Prediction Team
-
-## 📧 Contact
-
-For questions or collaboration, please open an issue on GitHub.
-
----
-
-**Note**: This project uses real AIS data for maritime trajectory prediction research. Ensure compliance with data usage policies and regulations.
 
