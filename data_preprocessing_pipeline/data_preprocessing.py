@@ -10,9 +10,6 @@ Key Features:
 - Feature engineering (velocity, acceleration, turn rate)
 - Temporal resampling and interpolation
 - Train/validation/test split generation
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import logging

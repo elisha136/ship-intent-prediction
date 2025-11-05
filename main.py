@@ -15,8 +15,7 @@ Usage:
     test: Run on small test dataset
     predict: Make predictions for specific vessel
 
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
+
 """
 
 import logging

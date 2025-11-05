@@ -11,9 +11,6 @@ Ensemble Strategies:
 3. Feature-Based Gating - Select model based on trajectory features
 4. Error Prediction - Predict which model will perform best
 5. Stacking - Use ML to combine predictions optimally
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import logging

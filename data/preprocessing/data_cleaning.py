@@ -11,9 +11,6 @@ for AIS (Automatic Identification System) data. It handles common issues such as
 
 The cleaning process is designed to be robust while preserving genuine
 vessel behavior patterns.
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import logging

@@ -11,9 +11,6 @@ Metrics include:
 - Mean Squared Error (MSE)
 - Mean Absolute Error (MAE)
 - Root Mean Squared Error (RMSE)
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import logging

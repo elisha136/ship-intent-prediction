@@ -4,9 +4,6 @@ Configuration Management for Ship Trajectory Prediction System
 This module contains all configuration parameters for database connection,
 data processing, and model settings. Centralized configuration ensures
 easy maintenance and consistent parameter usage across the system.
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import os

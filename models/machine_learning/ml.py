@@ -11,9 +11,6 @@ models cannot capture, including:
 - Historical turning patterns
 - Speed variation behaviors
 - Contextual features (time of day, traffic density)
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import logging

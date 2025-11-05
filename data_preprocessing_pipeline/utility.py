@@ -3,9 +3,6 @@ Utility Functions Module
 
 Common utility functions used across the ship trajectory prediction system.
 Includes geographic calculations, data transformations, and helper functions.
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import numpy as np

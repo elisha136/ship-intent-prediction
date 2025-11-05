@@ -10,8 +10,7 @@ These models serve as baselines for comparison with machine learning approaches.
 They are computationally efficient and provide reasonable predictions for
 short horizons in steady-state navigation.
 
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
+
 """
 
 import logging

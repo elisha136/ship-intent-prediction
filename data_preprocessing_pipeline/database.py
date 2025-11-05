@@ -10,9 +10,6 @@ Key Features:
 - Parameterized queries to prevent SQL injection
 - Batch processing for large datasets
 - Error handling and connection recovery
-
-Author: Ship Trajectory Prediction Team
-Date: 2025-11-04
 """
 
 import logging
