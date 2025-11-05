@@ -1,0 +1,50 @@
+2025-11-04 22:38:25,948 - root - INFO - Configuration validation successful
+2025-11-04 22:38:25,949 - __main__ - INFO - Running in FULL mode with complete dataset...
+This will process the entire 32M record dataset. Continue? (yes/no): 2025-11-04 22:38:25,949 - __main__ - INFO - Initializing Trajectory Prediction Pipeline...
+2025-11-04 22:38:25,949 - data.preprocessing.data_cleaning - INFO - AIS Data Cleaner initialized
+2025-11-04 22:38:25,949 - data.preprocessing.data_preprocessing - INFO - Trajectory Segmenter initialized
+2025-11-04 22:38:25,949 - data.preprocessing.data_preprocessing - INFO - Feature Engineering initialized
+2025-11-04 22:38:25,949 - data.preprocessing.data_preprocessing - INFO - Dataset Splitter initialized
+2025-11-04 22:38:25,949 - evaluation.evaluation - INFO - Trajectory Evaluator initialized
+2025-11-04 22:38:25,949 - models.statistical.baseline - INFO - Constant Velocity Model initialized
+2025-11-04 22:38:25,949 - models.statistical.baseline - INFO - Constant Turn Rate Model initialized
+2025-11-04 22:38:25,949 - models.statistical.baseline - INFO - Kalman Filter initialized
+2025-11-04 22:38:25,949 - models.machine_learning.ml - INFO - ML Feature Engineering initialized with 1800s window
+2025-11-04 22:38:25,949 - models.machine_learning.ml - INFO - Random Forest initialized: 100 trees, max_depth=20
+2025-11-04 22:38:25,949 - __main__ - INFO - Pipeline initialized successfully
+2025-11-04 22:38:25,949 - __main__ - INFO - ============================================================
+2025-11-04 22:38:25,949 - __main__ - INFO - STARTING FULL PIPELINE
+2025-11-04 22:38:25,950 - __main__ - INFO - ============================================================
+2025-11-04 22:38:25,950 - __main__ - INFO - Connecting to database...
+2025-11-04 22:38:25,962 - data.preprocessing.database - INFO - Database connection pool created: 1-5 connections
+2025-11-04 22:38:25,962 - data.preprocessing.database - INFO - AIS Data Loader initialized
+2025-11-04 22:38:25,962 - __main__ - INFO - Database connection established
+2025-11-04 22:38:25,963 - __main__ - INFO - Loading AIS data (limit=None)...
+2025-11-04 22:38:46,523 - data.preprocessing.database - INFO - Table info: {'table_name': 'ais1_position', 'total_records': 32448126, 'unique_vessels': 1065, 'start_time': datetime.datetime(2024, 8, 2, 12, 17, 49, 241000, tzinfo=datetime.timezone.utc), 'end_time': datetime.datetime(2025, 3, 31, 6, 1, 36, 822000, tzinfo=datetime.timezone.utc), 'duration_days': 240}
+2025-11-04 22:38:46,524 - data.preprocessing.database - INFO - Loading AIS data with query: SELECT mmsi, latitude, longitude, sog, cog, timestamp FROM ais1_position ORDER BY mmsi, timestamp...
+/home/adimalaa/ship_intent_prediction/data/preprocessing/database.py:203: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn, params=params)
+2025-11-04 22:41:30,875 - data.preprocessing.database - INFO - Loaded 32448126 records from database
+2025-11-04 22:41:30,884 - __main__ - INFO - Loaded 32448126 raw AIS records
+2025-11-04 22:41:30,884 - __main__ - INFO - Cleaning AIS data...
+2025-11-04 22:41:30,884 - data.preprocessing.data_cleaning - INFO - Starting data cleaning pipeline with 32448126 records
+2025-11-04 22:41:44,113 - data.preprocessing.data_cleaning - INFO - Removed 85156 duplicate records
+2025-11-04 22:41:45,008 - data.preprocessing.data_cleaning - INFO - Removed 0 records with invalid coordinates
+2025-11-04 22:41:45,620 - data.preprocessing.data_cleaning - INFO - Marked 5 records with invalid SOG as missing
+2025-11-04 22:41:45,837 - data.preprocessing.data_cleaning - INFO - Marked 0 records with invalid COG as missing
+2025-11-04 22:41:59,363 - data.preprocessing.data_cleaning - INFO - Removed 1 records due to missing critical values
+2025-11-04 22:42:15,017 - data.preprocessing.data_cleaning - INFO - Removed 54927 position outliers
+2025-11-04 22:42:18,051 - data.preprocessing.data_cleaning - INFO - Removed 1148 motion outliers
+2025-11-04 22:42:18,055 - data.preprocessing.data_cleaning - INFO - Cleaning complete: 32306894 records remaining (141232 removed, 0.44%)
+2025-11-04 22:42:18,055 - __main__ - INFO - Segmenting trajectories...
+2025-11-04 22:42:18,055 - data.preprocessing.data_preprocessing - INFO - Segmenting 32306894 records into trajectories...
+2025-11-04 22:42:40,318 - data.preprocessing.data_preprocessing - INFO - Created 14057 valid trajectories
+2025-11-04 22:42:43,799 - __main__ - INFO - Splitting dataset...
+2025-11-04 22:42:43,799 - data.preprocessing.data_preprocessing - INFO - Performing temporal split...
+2025-11-04 22:42:44,103 - data.preprocessing.data_preprocessing - INFO - Split: 8434 train, 2811 val, 2812 test trajectories
+2025-11-04 22:42:44,104 - __main__ - INFO - Training machine learning models...
+2025-11-04 22:42:44,105 - __main__ - INFO - Training ML models on 8434 trajectories...
+2025-11-04 22:42:44,105 - __main__ - INFO - Training Random Forest...
+2025-11-04 22:42:44,105 - models.machine_learning.ml - INFO - Training Random Forest models...
+2025-11-04 22:42:44,105 - models.machine_learning.ml - INFO - Creating training samples from 8434 trajectories...
+2025-11-04 22:44:11,945 - models.machine_learning.ml - INFO - Processed 0/8434 trajectories, created 737 samples

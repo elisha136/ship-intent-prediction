@@ -1,0 +1,117 @@
+DETAILED MODEL EVALUATION RESULTS
+============================================================
+
+Constant Velocity
+------------------------------------------------------------
+Horizon 30s:
+  ADE: 20.41
+  FDE: 5.19
+  MSE: 1993.01
+  MAE: 20.41
+  RMSE: 44.64
+
+Horizon 60s:
+  ADE: 42.87
+  FDE: 5.84
+  MSE: 13099.41
+  MAE: 42.87
+  RMSE: 114.45
+
+Horizon 120s:
+  ADE: 116.63
+  FDE: 13.72
+  MSE: 89251.38
+  MAE: 116.63
+  RMSE: 298.75
+
+Horizon 180s:
+  ADE: 217.49
+  FDE: 25.01
+  MSE: 272717.41
+  MAE: 217.49
+  RMSE: 522.22
+
+Horizon 300s:
+  ADE: 430.65
+  FDE: 58.45
+  MSE: 947629.33
+  MAE: 430.65
+  RMSE: 973.46
+
+
+Constant Turn Rate
+------------------------------------------------------------
+Horizon 30s:
+  ADE: 21.41
+  FDE: 5.52
+  MSE: 2224.01
+  MAE: 21.41
+  RMSE: 47.16
+
+Horizon 60s:
+  ADE: 47.37
+  FDE: 6.52
+  MSE: 16262.81
+  MAE: 47.37
+  RMSE: 127.53
+
+Horizon 120s:
+  ADE: 131.60
+  FDE: 15.38
+  MSE: 114693.23
+  MAE: 131.60
+  RMSE: 338.66
+
+Horizon 180s:
+  ADE: 243.53
+  FDE: 28.54
+  MSE: 351605.89
+  MAE: 243.53
+  RMSE: 592.96
+
+Horizon 300s:
+  ADE: 495.33
+  FDE: 64.34
+  MSE: 1267960.56
+  MAE: 495.33
+  RMSE: 1126.04
+
+
+Kalman Filter
+------------------------------------------------------------
+Horizon 30s:
+  ADE: 69.66
+  FDE: 25.60
+  MSE: 15937.42
+  MAE: 69.66
+  RMSE: 126.24
+
+Horizon 60s:
+  ADE: 116.65
+  FDE: 38.41
+  MSE: 43140.07
+  MAE: 116.65
+  RMSE: 207.70
+
+Horizon 120s:
+  ADE: 223.78
+  FDE: 69.98
+  MSE: 161570.58
+  MAE: 223.78
+  RMSE: 401.96
+
+Horizon 180s:
+  ADE: 344.31
+  FDE: 107.17
+  MSE: 385181.78
+  MAE: 344.31
+  RMSE: 620.63
+
+Horizon 300s:
+  ADE: 584.60
+  FDE: 195.83
+  MSE: 1108843.25
+  MAE: 584.60
+  RMSE: 1053.02
+
+
